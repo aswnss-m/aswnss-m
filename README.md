@@ -1,4 +1,5 @@
 ### Hi there 👋
+[![aswnss's DEV Profile](https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg)](https://dev.to/aswnssm)
 
 <!--
 **aswnss-m/aswnss-m** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
