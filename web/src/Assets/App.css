@@ -39,3 +39,13 @@ body{
 .light-bg{
   background-color: var(--light);
 }
+
+.container{
+  display: flex;
+  min-height: 50vh;
+}
+.container.center{
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

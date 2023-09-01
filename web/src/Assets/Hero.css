@@ -1,0 +1,8 @@
+/* .hero-section-container{
+    min-height: 100vh;
+    background-color: var(--light);
+    opacity: 0.8;
+    background-image: radial-gradient(circle at left top, var(--purple), #040404), repeating-radial-gradient(circle at left top, var(--dark-purple), var(--dark), 10px, transparent 20px, transparent 10px);
+    background-blend-mode: multiply;
+    filter: contrast(1.3);
+} */
