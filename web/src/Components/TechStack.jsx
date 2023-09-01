@@ -11,7 +11,7 @@ import illustrator from '../Assets/icons/Illustrator.svg'
 import "../Assets/styles/TechStack.css"
 function TechStack() {
   return (
-    <div className='container center'>
+    <section className='container center'>
         <h1>Tech Stack</h1>
         <ul className='tech-stack-list list'>
             <li className='list-item'>
@@ -51,7 +51,7 @@ function TechStack() {
                 <p className="item-description">Illustrator</p>
             </li>
         </ul>
-    </div>
+    </section>
   )
 }
 
