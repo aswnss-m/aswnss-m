@@ -7,7 +7,7 @@ function Hero() {
       <h1>Hello</h1>
       <h2>I'm <span>Aswin</span></h2>
       <p>A full stack developer and an engineer based in India</p>
-      <ul>
+      <ul className='list'>
         <li>
           <button>
             Say Hi
