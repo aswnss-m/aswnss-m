@@ -3,6 +3,8 @@ import "./Assets/styles/App.css"
 const Hero = React.lazy(() => import('./Components/Hero'))
 const TechStack = React.lazy(() => import('./Components/TechStack'))
 const Projects = React.lazy(() => import('./Components/Projects'))
+const Contact = React.lazy(() => import('./Components/Contact'))
+
 function App() {
   
   const [middleX,setMiddleX] = React.useState(window.innerWidth/2);
@@ -36,10 +38,7 @@ function App() {
   };
 
   useEffect(() => {
-    // Add event listener to the document to capture mouse movements on the entire page
     document.addEventListener('mousemove', rotateCard);
-
-    // Remove event listener when the component unmounts
     return () => {
       document.removeEventListener('mousemove', rotateCard);
     };
@@ -55,6 +54,9 @@ function App() {
       </Suspense>
       <Suspense fallback={<div>Loading...</div>}>
         <Projects />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Contact />
       </Suspense>
     </div>
   )

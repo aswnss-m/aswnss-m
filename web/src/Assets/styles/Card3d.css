@@ -7,6 +7,7 @@
     perspective(5000px)
     rotateX(var(--rotateX))
     rotateY(var(--rotateY));
+    transition: transform 200ms linear;
 }
 
 .bottom-card{
@@ -58,9 +59,6 @@
 }
 .status-badge.inactive{
     background-color: #ff0000;
-}
-.card-container:hover{
-    transform: rotateX(0deg) rotateY(0deg);
 }
 .bottom-card{
     width: 100%;
