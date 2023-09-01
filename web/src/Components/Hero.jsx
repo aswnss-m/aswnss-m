@@ -4,9 +4,10 @@ function Hero() {
   return (
     <section
     className='container center hero-section-container'>
-      <h1>Hello</h1>
-      <h2>I'm <span>Aswin</span></h2>
+      <div className="hero-content">
+      <h1>Hello I'm, <span className='name'>Aswin</span></h1>
       <p>A full stack developer and an engineer based in India</p>
+      </div>
       <ul className='list hero-list'>
         <li>
           <button className='glass-button'>

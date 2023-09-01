@@ -5,3 +5,41 @@
     padding: 0;
     margin: 0;
 }
+.hero-section-container{
+    /* background-image: conic-gradient(transparent, transparent,var(--purple), var(--bright-purple),var(--dark), transparent); */
+}
+.hero-content{
+    font-weight: 100;
+    align-self: center;
+    text-align: center;
+}
+.hero-content h1{
+    font-weight: 100;
+}
+.name{
+    font-weight: 600;
+    font-size: 3rem;
+    background: -webkit-linear-gradient(var(--purple), var(--bright-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: font-weight 1s ease;
+  animation: backgroundAnimation 1s infinite alternate ease-in; /* Adjust the duration and animation type as needed */
+}
+.name:hover{
+    font-weight: 100;
+}
+@keyframes backgroundAnimation {
+  0% {
+    background: -webkit-linear-gradient(var(--purple), var(--bright-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: -webkit-linear-gradient(var(--bright-purple), var(--purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
