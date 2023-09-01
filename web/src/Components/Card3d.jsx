@@ -39,7 +39,7 @@ function Card3d({props}) {
     <div className="card-container">
       <Link to={props.link}>
       <div className="bottom-card">
-        <h4>{props.title}</h4>
+        <p>{props.title}</p>
       </div></Link>
       <div className="middle-card">
         <span className={status}></span>

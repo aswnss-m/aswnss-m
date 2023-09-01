@@ -4,7 +4,7 @@ import "../Assets/styles/Hero.css"
 function Hero() {
   return (
     <section
-    className='container center hero-section-container'>
+    className='container bg center hero-section-container'>
       <div className="hero-content">
       <h1>Hello I'm, <span className='name'>Aswin</span></h1>
       <p>A full stack developer and an engineer based in India</p>

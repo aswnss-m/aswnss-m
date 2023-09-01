@@ -29,14 +29,15 @@
     align-items: center;
     transform-style: preserve-3d;
     padding: 5px;
+    z-index: 2;
 }
 .top-card img{
     width: 100%;
     height: 100%;
 }
 .middle-card{
-    width: 50%;
-    height: 25%;
+    width: 25%;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,10 +46,12 @@
     left: 10px;
     transform-style: preserve-3d;
     gap: 10px;
+    font-size: small;
+    z-index: 2;
 }
 .status-badge{
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
 }
 .status-badge.active{
@@ -65,12 +68,13 @@
     height: 100%;
     position: absolute;
     transform-style: preserve-3d;
+    z-index: 1;
 }
 
 .top-card{
 background: rgba(255, 255, 255, 0.479);
 border-radius: 16px;
-box-shadow: 0 4px 30px rgba(255, 255, 255, 0.173);
+box-shadow: 0 4px 30px rgba(197, 197, 197, 0.495);
 backdrop-filter: blur(6.8px);
 -webkit-backdrop-filter: blur(6.8px);
 border: 1px solid rgba(255, 255, 255, 0.39);
@@ -85,8 +89,8 @@ border: 1px solid rgba(255, 255, 255, 0.39);
 }
 .middle-card{
 background: rgba(5, 5, 5, 0.369);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.485);
+border-radius: 5px;
+box-shadow: 0 4px 30px rgba(177, 177, 177, 0.485);
 backdrop-filter: blur(19px);
 -webkit-backdrop-filter: blur(19px);
 border: 1px solid rgba(255, 255, 255, 0.39);
