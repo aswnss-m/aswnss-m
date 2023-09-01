@@ -28,7 +28,6 @@ function App() {
 
     const offsetX = ((x - middleX) / middleX) * 30;
     const offsetY = ((y - middleY) / middleY) * 30;
-    console.log(offsetX, offsetY);
 
     for (let i = 0; i < cards.length; i++) {
       cards[i].style.setProperty('--rotateX', `${-offsetY}deg`);
