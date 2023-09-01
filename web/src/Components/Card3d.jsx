@@ -7,11 +7,9 @@ import figma from '../Assets/icons/Figma.svg';
 import { useState } from 'react';
 
 function Card3d({props}) {
-    console.log(props)
     const [status , setStatus] = useState(props.status)
     const [tech, setTech] = useState(props.tech)
     useEffect(()=>{
-        console.log(status)
         if (status === 'online'){
             setStatus('status-badge active')
         }
