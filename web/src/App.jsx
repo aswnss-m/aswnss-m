@@ -1,5 +1,5 @@
 import React,{Suspense} from 'react'
-import "./Assets/App.css"
+import "./Assets/styles/App.css"
 const Hero = React.lazy(() => import('./Components/Hero'))
 function App() {
   return (
