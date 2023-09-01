@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "../Assets/styles/Hero.css"
 function Hero() {
   return (
@@ -16,7 +17,9 @@ function Hero() {
         </li>
         <li>
           <button className='glass-button'>
-            View Resume
+            <Link to={'https://drive.google.com/file/d/14j2mrIipDxHmJNN_xBs0lK64z6ofgZeB/view?usp=sharing'}>
+              View Resume
+            </Link>
           </button>
         </li>
       </ul>
