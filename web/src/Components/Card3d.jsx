@@ -4,7 +4,9 @@ import node from '../Assets/icons/Node.svg';
 import react from '../Assets/icons/React.svg';
 import python from '../Assets/icons/Python.svg';
 import figma from '../Assets/icons/Figma.svg';
+import github from '../Assets/icons/Github.svg';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Card3d({props}) {
     const [status , setStatus] = useState(props.status)
@@ -26,6 +28,8 @@ function Card3d({props}) {
             setTech(python)
         }else if (tech ==='figma'){
             setTech(figma)
+        } else if(tech === 'github'){
+            setTech(github)
         }
         else{
             setTech(null)
@@ -33,13 +37,15 @@ function Card3d({props}) {
     },[])
   return (
     <div className="card-container">
+      <Link to={props.link}>
       <div className="bottom-card">
         <h4>{props.title}</h4>
-      </div>
+      </div></Link>
       <div className="middle-card">
         <span className={status}></span>
         <p>{props.status}</p>
       </div>
+
       <div className="top-card">
         <img src={tech} alt="Node" />
       </div>
