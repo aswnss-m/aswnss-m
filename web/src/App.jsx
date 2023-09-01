@@ -4,7 +4,7 @@ const Hero = React.lazy(() => import('./Components/Hero'))
 const TechStack = React.lazy(() => import('./Components/TechStack'))
 const Projects = React.lazy(() => import('./Components/Projects'))
 const Contact = React.lazy(() => import('./Components/Contact'))
-
+const Footer = React.lazy(() => import('./Components/Footer'))
 function App() {
   
   const [middleX,setMiddleX] = React.useState(window.innerWidth/2);
@@ -57,6 +57,9 @@ function App() {
       </Suspense>
       <Suspense fallback={<div>Loading...</div>}>
         <Contact />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Footer />
       </Suspense>
     </div>
   )

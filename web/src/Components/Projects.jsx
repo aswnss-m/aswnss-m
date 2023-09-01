@@ -8,19 +8,19 @@ function Projects() {
         <h1>Projects</h1>
         <div className="projects">
         <Card3d props = {{
-            title: 'Project 1',
+            title: 'College Website Optimization',
             status: 'online',
             tech: 'python'
         }}/>
         <Card3d props = {{
-            title: 'Project 1',
-            status: 'offline',
+            title: 'Cult A Way 2023 Website',
+            status: 'online',
             tech: 'react'
         }}/>
         <Card3d props = {{
-            title: 'Project 1',
-            status: 'online',
-            tech: 'figma'
+            title: '2nd Books | Ecom Website',
+            status: 'offline',
+            tech: 'react'
         }}/>
         </div>
     </section>

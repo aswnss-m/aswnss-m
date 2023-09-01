@@ -68,26 +68,23 @@
 }
 
 .top-card{
-    /* From https://css.glass */
-background: rgba(255, 255, 255, 0.546);
+background: rgba(255, 255, 255, 0.479);
 border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.427);
+box-shadow: 0 4px 30px rgba(255, 255, 255, 0.173);
 backdrop-filter: blur(6.8px);
 -webkit-backdrop-filter: blur(6.8px);
 border: 1px solid rgba(255, 255, 255, 0.39);
 }
 .bottom-card{
-    /* From https://css.glass */
-background: rgba(22, 32, 208, 0.69);
+background: rgba(141, 1, 255, 0.096);
 border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+box-shadow: 0 4px 30px rgba(140, 11, 114, 0.313);
 backdrop-filter: blur(6.8px);
 -webkit-backdrop-filter: blur(6.8px);
 border: 1px solid rgba(255, 255, 255, 0.39);
 }
 .middle-card{
-    /* From https://css.glass */
-background: rgba(156, 29, 131, 0.369);
+background: rgba(5, 5, 5, 0.369);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.485);
 backdrop-filter: blur(19px);

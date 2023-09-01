@@ -7,14 +7,14 @@ function Hero() {
       <h1>Hello</h1>
       <h2>I'm <span>Aswin</span></h2>
       <p>A full stack developer and an engineer based in India</p>
-      <ul className='list'>
+      <ul className='list hero-list'>
         <li>
-          <button>
+          <button className='glass-button'>
             Say Hi
           </button>
         </li>
         <li>
-          <button>
+          <button className='glass-button'>
             View Resume
           </button>
         </li>

@@ -9,9 +9,8 @@ function Contact() {
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
             <textarea placeholder="Message"></textarea>
-            <button type="submit">Send</button>
+            <button type="submit" className='glass-button button-large'>Send</button>
         </form>
-        <div className="socials"></div>
     </section>
   )
 }

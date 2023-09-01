@@ -1,0 +1,6 @@
+.footer-container{
+    font-size: small;
+    display: grid;
+    place-items:center;
+    padding: 10px;
+}
