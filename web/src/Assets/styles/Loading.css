@@ -1,0 +1,28 @@
+.loading{
+animation: skeletonAnimation 1.5s linear infinite;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--dark) 0%, var(--purple) 50%, var(--dark) 100%);
+  background-size: 200% 100%;
+  opacity: .3;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes skeletonAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

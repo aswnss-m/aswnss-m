@@ -1,5 +1,6 @@
 import React,{Suspense, useEffect} from 'react'
 import "./Assets/styles/App.css"
+import Loading from './Components/Loading'
 const Hero = React.lazy(() => import('./Components/Hero'))
 const TechStack = React.lazy(() => import('./Components/TechStack'))
 const Projects = React.lazy(() => import('./Components/Projects'))
@@ -46,19 +47,19 @@ function App() {
 
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <Hero />
       </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <TechStack />
       </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <Projects />
       </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <Contact />
       </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <Footer />
       </Suspense>
     </div>
