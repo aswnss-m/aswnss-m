@@ -11,7 +11,12 @@ function Hero() {
       </div>
       <ul className='list hero-list'>
         <li>
-          <button className='glass-button'>
+          <button className='glass-button'  onClick={()=>{
+            window.scrollTo({
+              top: document.body.scrollHeight,
+              behavior: 'smooth',
+            });
+          }}>
             Say Hi
           </button>
         </li>
