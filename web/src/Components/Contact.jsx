@@ -21,9 +21,9 @@ function Contact() {
     <section className='container center'>
         <h1>Say Hi</h1>
         <form ref={form} className={`contact-form ${sending?'sending':''}`} onSubmit={sendMail}>
-            <input type="text" placeholder="Name" name='from_name' />
-            <input type="email" placeholder="Email" name='from_mail'/>
-            <textarea placeholder="Message" name={'message'}></textarea>
+            <input type="text" placeholder="Name" name='from_name' required/>
+            <input type="email" placeholder="Email" name='from_mail' required/>
+            <textarea placeholder="Message" name={'message'} required></textarea>
             <button type="submit" className='glass-button button-large' >Send </button>
         </form>
     </section>
