@@ -1,15 +1,30 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
 import "../Assets/styles/Contact.css"
 
 function Contact() {
+  const form = useRef();
+  const [sending, setSending] = React.useState(false);
+  const sendMail = (e) => {
+    e.preventDefault();
+    setSending(true);
+    emailjs.sendForm('contact_me_service', 'contact_me', form.current, 'maX4aeWu7ChfrwgvE')
+    .then((result) => {
+      console.log(result.text);
+      form.current.reset();
+      setSending(false);
+  }, (error) => {
+      console.log(error.text);
+  });
+  }
   return (
     <section className='container center'>
         <h1>Say Hi</h1>
-        <form className="contact-form">
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <textarea placeholder="Message"></textarea>
-            <button type="submit" className='glass-button button-large'>Send</button>
+        <form ref={form} className={`contact-form ${sending?'sending':''}`} onSubmit={sendMail}>
+            <input type="text" placeholder="Name" name='from_name' />
+            <input type="email" placeholder="Email" name='from_mail'/>
+            <textarea placeholder="Message" name={'message'}></textarea>
+            <button type="submit" className='glass-button button-large' >Send </button>
         </form>
     </section>
   )

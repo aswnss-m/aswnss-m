@@ -5,6 +5,10 @@
     gap: 1em;
     width: min(90dvw,1000px);
 }
+.contact-form.sending{
+    opacity: 0.5;
+    pointer-events: none;
+}
 .contact-form input,textarea{
     width: 100%;
     background-color: transparent;
