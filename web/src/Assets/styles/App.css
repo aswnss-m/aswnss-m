@@ -83,7 +83,7 @@ body{
   opacity: 0.8;
   background-image: repeating-radial-gradient(circle at 0 0, transparent 0, rgba(140, 8, 188, 0.272) 200px),
                     repeating-linear-gradient(var(--dark), var(--dark));
-  animation: bgchange 10s linear infinite alternate;
+  animation: bgchange 5s linear infinite alternate;
   background-size: 200px 200px, 100% 100%; /* Initial background sizes */
 }
 
