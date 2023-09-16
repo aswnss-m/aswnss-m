@@ -22,7 +22,7 @@ function Hero() {
         </li>
         <li>
           <button className='glass-button'>
-            <Link to={'https://drive.google.com/file/d/14j2mrIipDxHmJNN_xBs0lK64z6ofgZeB/view?usp=sharing'}>
+            <Link to={'https://docs.google.com/document/d/e/2PACX-1vTnnNKJCeuhTvCjiiX15KnwfQ3jmfvpCngM1y3ZCrccIf01Y-OUJUZ6eLt6fYssMZWwQDbG2i_dEYpc/pub'}>
               View Resume
             </Link>
           </button>
