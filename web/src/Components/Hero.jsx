@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "../Assets/styles/Hero.css"
+import instagram from "../Assets/icons/instagram.svg"
+import x from "../Assets/icons/x.svg"
+import linkedin from "../Assets/icons/linkedin.svg"
+import whatsapp from "../Assets/icons/whatsapp.svg"
 function Hero() {
   return (
     <section
@@ -27,6 +31,26 @@ function Hero() {
             </Link>
           </button>
         </li>
+      </ul>
+      <ul className='socials-list'>
+      <li>
+          <Link to={'https://www.linkedin.com/in/aswnss'}>
+            <img src={linkedin} alt="linkedin account" />
+          </Link>
+        </li>
+        
+        <li>
+          <Link to={'https://www.x.com/aswnss'}>
+            <img src={x} alt="twitter account" />
+          </Link>
+        </li>
+        <li><Link to={'https://www.instagram.com/aswnss'}>
+          <img src={instagram} alt="instagram account" />
+        </Link></li>
+        <li><Link to={'https://wa.me/919446451902?text=Hi,%20I%20got%20this%20from%20your%20website'}>
+          <img src={whatsapp} alt="whatsapp account" />
+        </Link></li>
+        
       </ul>
     </section>
   )
