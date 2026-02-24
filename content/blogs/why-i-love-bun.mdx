@@ -1,0 +1,38 @@
+---
+title: "Why I Love Bun"
+date: "2025-02-24"
+description: "Bun has replaced Node.js in nearly all of my projects. Here's why I think it's the future of JavaScript runtimes."
+tags: ["bun", "javascript", "tooling"]
+---
+
+# Why I Love Bun
+
+I switched from Node.js to [Bun](https://bun.sh) about a year ago and I haven't looked back. It's fast, it's batteries-included, and the developer experience is simply better.
+
+## It's stupid fast
+
+Package installs that used to take 30 seconds with npm take under 5 with Bun. Cold starts are near-instant. If you're running scripts or lightweight servers, the difference is night and day.
+
+## One tool for everything
+
+Bun is a runtime, package manager, bundler, and test runner all in one. You don't need to configure webpack, jest, or a separate package manager. Just `bun run`, `bun test`, `bun add` — that's the whole mental model.
+
+## Hono pairs perfectly with it
+
+I've been using [Hono](https://hono.dev) as my web framework of choice when building APIs with Bun. It's lightweight, typed, and has great middleware support. The combo of Bun + Hono feels like what Express should have been.
+
+```typescript
+import { Hono } from "hono";
+
+const app = new Hono();
+
+app.get("/", (c) => c.text("Hello from Bun!"));
+
+export default app;
+```
+
+## Should you switch?
+
+If you're building new projects, absolutely try Bun. It's production-ready and the ecosystem support keeps getting better. The only caveat is some native Node.js modules that rely on C++ bindings — check compatibility first if that's a concern.
+
+But for the vast majority of web projects? Bun is the move.
