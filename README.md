@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">Hey, I'm Aswin 👋</h1>
 
-## Getting Started
+<p align="center">
+  software developer &nbsp;·&nbsp; co-founder @ <a href="https://www.softservedweb.com">Soft Served Web</a> &nbsp;·&nbsp; <a href="https://twitter.com/aswnss">@aswnss</a>
+</p>
 
-First, run the development server:
+<p align="center">
+  Building AI-powered apps, web services, and rapid MVPs. <br/>
+  Currently deep in Next.js, Bun, and React Native.
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<br/>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=nextjs,react,ts,nodejs,bun,python,react&theme=dark&perline=7" />
+  </a>
+</p>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<br/>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=aswnss-m&theme=tokyonight&hide_border=true&background=FFFFFF00" />
+</p>
 
-## Learn More
+<br/>
 
-To learn more about Next.js, take a look at the following resources:
+<p align="center">
+  <a href="https://www.linkedin.com/in/aswnss">
+    <img src="https://img.shields.io/badge/LinkedIn-aswnss-0A66C2?style=flat&logo=linkedin&logoColor=white" />
+  </a>
+  &nbsp;
+  <a href="https://twitter.com/aswnss">
+    <img src="https://img.shields.io/badge/Twitter-@aswnss-000000?style=flat&logo=x&logoColor=white" />
+  </a>
+  &nbsp;
+  <a href="mailto:aswnss.m@gmail.com">
+    <img src="https://img.shields.io/badge/Email-aswnss.m@gmail.com-EA4335?style=flat&logo=gmail&logoColor=white" />
+  </a>
+</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br/>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<p align="center">
+  <a href="https://www.buymeacoffee.com/aswnss">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-orange.png" height="50" width="210" alt="aswnss" />
+  </a>
+</p>
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

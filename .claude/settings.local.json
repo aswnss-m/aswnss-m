@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /c/Users/aswin/p/portfolio && bun add next-mdx-remote gray-matter @tailwindcss/typography 2>&1)",
+      "Bash(cd /c/Users/aswin/p/portfolio && bunx shadcn add button badge card avatar separator --overwrite 2>&1)",
+      "Bash(tail:*)",
+      "Bash(cd /c/Users/aswin/p/portfolio && bun add next-themes 2>&1)",
+      "Bash(cd:*)"
+    ]
+  }
+}
