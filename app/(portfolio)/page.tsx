@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ThemeToggle } from "@/components/theme-toggle";
+import ProfilePicture from "./components/profilePicture";
 
 export const metadata: Metadata = {
   title: "Aswin Lal M",
@@ -45,6 +46,7 @@ const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
+
 export default function HomePage() {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center px-6 py-20">
@@ -52,12 +54,7 @@ export default function HomePage() {
         <ThemeToggle />
       </div>
       <div className="flex flex-col items-center gap-6 text-center max-w-sm">
-        <Avatar className="size-24 ring-2 ring-border">
-          <AvatarImage src="/profile.jpg" alt="Aswin Lal M" />
-          <AvatarFallback className="text-2xl font-semibold bg-accent text-accent-foreground">
-            AL
-          </AvatarFallback>
-        </Avatar>
+        <ProfilePicture />
 
         <div className="flex flex-col gap-1">
           <h1 className="text-2xl font-semibold tracking-tight">Aswin Lal M</h1>
