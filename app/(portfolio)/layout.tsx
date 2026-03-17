@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const fontSans = Geist({
-  subsets: ["latin"],
+  subsets: [ "latin" ],
   variable: "--font-sans",
 });
 
 const fontMono = Geist_Mono({
-  subsets: ["latin"],
+  subsets: [ "latin" ],
   variable: "--font-mono",
 });
 
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   },
   description:
     "Software developer and co-founder of Soft Served Web. Building innovative solutions with Next.js, React, and modern web technologies.",
-  authors: [{ name: "Aswin Lal M", url: "https://www.linkedin.com/in/aswnss" }],
+  authors: [ { name: "Aswin Lal M", url: "https://www.linkedin.com/in/aswnss" } ],
   creator: "Aswin Lal M",
   openGraph: {
     type: "website",
@@ -52,6 +53,7 @@ export default function PortfolioLayout({
       >
         {children}
       </div>
+      <GoogleAnalytics gaId="GTM-KZMXN4HW" />
     </ThemeProvider>
   );
 }
