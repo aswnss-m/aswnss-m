@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Nav } from "@/components/nav";
 import { Badge } from "@/components/ui/badge";
 import { getAllBlogs } from "@/lib/blogs";
+import { FadeIn } from "@/components/motion/fade-in";
+import { StaggerList, StaggerItem } from "@/components/motion/stagger-list";
 
 export const metadata: Metadata = {
   title: "Blogs",
@@ -37,19 +39,19 @@ export default function BlogsPage() {
     <>
       <Nav />
       <main className="mx-auto max-w-2xl px-6 py-12">
-        <div className="mb-10">
+        <FadeIn className="mb-10">
           <h1 className="text-2xl font-semibold tracking-tight">Blogs</h1>
           <p className="mt-2 text-sm text-muted-foreground">
             Writing about things I learn, build, and think about.
           </p>
-        </div>
+        </FadeIn>
 
         {blogs.length === 0 ? (
           <p className="text-sm text-muted-foreground">No posts yet. Check back soon.</p>
         ) : (
-          <ul className="flex flex-col divide-y divide-border">
+          <StaggerList className="flex flex-col divide-y divide-border">
             {blogs.map((blog) => (
-              <li key={blog.slug}>
+              <StaggerItem key={blog.slug}>
                 <Link
                   href={`/blogs/${blog.slug}`}
                   className="group block py-6 transition-opacity hover:opacity-80"
@@ -84,9 +86,9 @@ export default function BlogsPage() {
                     )}
                   </div>
                 </Link>
-              </li>
+              </StaggerItem>
             ))}
-          </ul>
+          </StaggerList>
         )}
       </main>
     </>

@@ -6,6 +6,7 @@ import { getAllBlogs, getBlogBySlug } from "@/lib/blogs";
 import { Nav } from "@/components/nav";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft } from "lucide-react";
+import { FadeIn } from "@/components/motion/fade-in";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -95,6 +96,7 @@ export default async function BlogPostPage({ params }: Props) {
         </Link>
 
         <article>
+          <FadeIn>
           <header className="mb-8 flex flex-col gap-3">
             <h1 className="text-2xl font-semibold leading-snug tracking-tight">
               {blog.title}
@@ -121,6 +123,7 @@ export default async function BlogPostPage({ params }: Props) {
               </p>
             )}
           </header>
+          </FadeIn>
 
           <div className="prose prose-sm dark:prose-invert max-w-none prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-code:before:content-none prose-code:after:content-none prose-code:bg-muted prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-muted">
             <MDXRemote source={blog.content} />

@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion } from "motion/react";
 import { Separator } from "@/components/ui/separator";
 import { ThemeToggle } from "@/components/theme-toggle";
 
@@ -9,26 +13,48 @@ const links = [
 ];
 
 export function Nav() {
+  const pathname = usePathname();
+
   return (
     <header className="sticky top-0 z-10 bg-background/80 backdrop-blur-sm">
       <div className="mx-auto flex max-w-2xl items-center justify-between px-6 py-3">
         <Link
           href="/"
-          className="font-mono text-sm font-semibold tracking-tight hover:text-primary transition-colors"
+          className="font-mono text-sm font-semibold tracking-tight transition-colors hover:text-primary"
         >
           aswnss
         </Link>
         <div className="flex items-center gap-1">
-          <nav className="flex items-center gap-1 mr-1" aria-label="Site navigation">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <nav className="flex items-center mr-1" aria-label="Site navigation">
+            {links.map((link) => {
+              const isActive =
+                pathname === link.href || pathname.startsWith(`${link.href}/`);
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative px-3 py-1.5 text-sm transition-colors rounded-md hover:bg-accent ${
+                    isActive
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {link.label}
+                  {isActive && (
+                    <motion.span
+                      layoutId="nav-underline"
+                      className="absolute inset-x-3 -bottom-0.5 h-px bg-foreground"
+                      transition={{
+                        type: "spring",
+                        stiffness: 500,
+                        damping: 40,
+                      }}
+                    />
+                  )}
+                </Link>
+              );
+            })}
           </nav>
           <ThemeToggle />
         </div>

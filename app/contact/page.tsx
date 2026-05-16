@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Nav } from "@/components/nav";
 import { Separator } from "@/components/ui/separator";
-import { Mail, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
+import { FadeIn } from "@/components/motion/fade-in";
+import { StaggerList, StaggerItem } from "@/components/motion/stagger-list";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -63,16 +65,16 @@ export default function ContactPage() {
     <>
       <Nav />
       <main className="mx-auto max-w-2xl px-6 py-12">
-        <div className="mb-10">
+        <FadeIn className="mb-10">
           <h1 className="text-2xl font-semibold tracking-tight">Contact</h1>
           <p className="mt-2 text-sm text-muted-foreground">
             Feel free to reach out — I&apos;m always happy to chat.
           </p>
-        </div>
+        </FadeIn>
 
-        <ul className="flex flex-col divide-y divide-border">
+        <StaggerList className="flex flex-col divide-y divide-border">
           {contacts.map((c) => (
-            <li key={c.label}>
+            <StaggerItem key={c.label}>
               <a
                 href={c.href}
                 target={c.href.startsWith("http") ? "_blank" : undefined}
@@ -87,9 +89,9 @@ export default function ContactPage() {
                   {c.value}
                 </span>
               </a>
-            </li>
+            </StaggerItem>
           ))}
-        </ul>
+        </StaggerList>
 
         <Separator className="my-10" />
 
