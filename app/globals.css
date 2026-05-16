@@ -183,3 +183,31 @@
     letter-spacing: var(--tracking-normal);
   }
 }
+
+/* Theme-toggle ripple via View Transitions API */
+@keyframes theme-ripple-in {
+  from {
+    clip-path: circle(0px at var(--ripple-x, 50%) var(--ripple-y, 50%));
+  }
+  to {
+    clip-path: circle(
+      var(--ripple-r, 150vmax) at var(--ripple-x, 50%) var(--ripple-y, 50%)
+    );
+  }
+}
+
+::view-transition-old(root) {
+  animation: none;
+}
+
+::view-transition-new(root) {
+  animation: theme-ripple-in 1s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}

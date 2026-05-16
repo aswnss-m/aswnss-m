@@ -3,8 +3,11 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
-import { AnimatePresence, motion } from "motion/react";
 import { Button } from "@/components/ui/button";
+
+type DocumentWithVT = Document & {
+  startViewTransition?: (cb: () => void) => { ready: Promise<void> };
+};
 
 export function ThemeToggle({ className }: { className?: string }) {
   const { resolvedTheme, setTheme } = useTheme();
@@ -18,27 +21,42 @@ export function ThemeToggle({ className }: { className?: string }) {
   }
 
   const isDark = resolvedTheme === "dark";
+  const next = isDark ? "light" : "dark";
+
+  const toggle = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const doc = document as DocumentWithVT;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduce || typeof doc.startViewTransition !== "function") {
+      setTheme(next);
+      return;
+    }
+
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+    const radius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y),
+    );
+
+    const root = document.documentElement;
+    root.style.setProperty("--ripple-x", `${x}px`);
+    root.style.setProperty("--ripple-y", `${y}px`);
+    root.style.setProperty("--ripple-r", `${radius}px`);
+
+    doc.startViewTransition(() => setTheme(next));
+  };
 
   return (
     <Button
       variant="ghost"
       size="icon"
       className={className}
-      onClick={() => setTheme(isDark ? "light" : "dark")}
+      onClick={toggle}
       aria-label="Toggle theme"
     >
-      <AnimatePresence mode="wait" initial={false}>
-        <motion.span
-          key={isDark ? "sun" : "moon"}
-          initial={{ rotate: -90, opacity: 0, scale: 0.8 }}
-          animate={{ rotate: 0, opacity: 1, scale: 1 }}
-          exit={{ rotate: 90, opacity: 0, scale: 0.8 }}
-          transition={{ duration: 0.18, ease: "easeOut" }}
-          className="inline-flex"
-        >
-          {isDark ? <Sun className="size-4" /> : <Moon className="size-4" />}
-        </motion.span>
-      </AnimatePresence>
+      {isDark ? <Sun className="size-4" /> : <Moon className="size-4" />}
     </Button>
   );
 }

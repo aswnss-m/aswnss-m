@@ -24,8 +24,9 @@ export const metadata: Metadata = {
 const projects = [
   {
     name: "Life Calendar",
-    description: "TODO: short description.",
-    tags: ["TODO"],
+    description:
+      "A web app that generates a live wallpaper for iOS and Android showing the days left in the year as a progress bar — a small daily reminder that time is finite.",
+    tags: ["Next.js", "iOS", "Android", "Wallpaper"],
     url: "https://lifecalendar.aswnss.com",
     github: null,
   },
